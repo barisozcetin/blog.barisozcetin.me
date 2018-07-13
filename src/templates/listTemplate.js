@@ -7,14 +7,16 @@ export class listTemplate extends Component {
 	constructor(props) {
 		super(props);
 		const list = props.pathContext.myData.map((item) => item.node);
-		const posts = list.map((item) => {
-			try {
-				item.content = item.content ? JSON.parse(item.content) : null;
-			} catch (err) {
-				item.content = '';
-			}
-			return item;
-		});
+		const posts = list
+			.map((item) => {
+				try {
+					item.content = item.content ? JSON.parse(item.content) : null;
+				} catch (err) {
+					item.content = '';
+				}
+				return item;
+			})
+			.reverse();
 
 		this.state = { posts };
 	}
@@ -30,7 +32,7 @@ export class listTemplate extends Component {
 					}
 					@media only screen and (min-width: 480px) {
 						.main-grid {
-							grid-template-columns: 2fr 1fr;
+							grid-template-columns: 3fr 1fr;
 							grid-gap: 25px;
 						}
 					}

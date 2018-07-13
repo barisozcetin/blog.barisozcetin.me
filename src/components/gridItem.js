@@ -12,17 +12,17 @@ const gridItem = ({ post }) => {
 					<h3 className="card--category card-subtitle text-primary">{post.content.category}</h3>
 				</Link>
 				<Link to={post.full_slug}>
-					<h2 className="text-dark card-title h2">{post.content.title}</h2>
+					<h1 className="text-dark card-title h1">{post.content.title}</h1>
 				</Link>
 				<div className="social-buttons">
 					<button className="social-button btn btn-lg btn-primary">
-						<i className="fab fa-facebook" />
+						<i className="fab fa-facebook-f" />
 					</button>
 					<button className="social-button btn btn-lg btn-primary">
 						<i className="fab fa-twitter" />
 					</button>
 					<button className="social-button btn btn-lg btn-primary">
-						<i className="fab fa-linkedin" />
+						<i className="fab fa-linkedin-in" />
 					</button>
 				</div>
 			</div>
