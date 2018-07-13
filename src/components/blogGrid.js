@@ -12,9 +12,8 @@ const blogGrid = ({ posts }) => {
 				}
 				@media only screen and (min-width: 480px) {
 					.blog--grid {
-						grid-template-columns: 1fr 1fr 1fr;
+						grid-template-columns: 1fr 1fr;
 						grid-gap: 20px;
-						grid-template-areas: post post sidebar;
 					}
 				}
 			`}</style>

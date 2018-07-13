@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import BlogGrid from '../components/blogGrid';
+import SideBar from '../components/sideBar';
 
 export class listTemplate extends Component {
 	constructor(props) {
@@ -20,8 +21,20 @@ export class listTemplate extends Component {
 	render() {
 		const { posts } = this.state;
 		return (
-			<div>
+			<div className="main-grid">
 				<BlogGrid posts={posts} />
+				<SideBar />
+				<style jsx>{`
+					.main-grid {
+						display: grid;
+					}
+					@media only screen and (min-width: 480px) {
+						.main-grid {
+							grid-template-columns: 2fr 1fr;
+							grid-gap: 25px;
+						}
+					}
+				`}</style>
 			</div>
 		);
 	}
