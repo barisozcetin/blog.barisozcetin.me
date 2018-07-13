@@ -6,21 +6,15 @@ const gridItem = ({ post }) => {
 		<div className="grid--item" key={post.id}>
 			<img src={post.content.thumbnail} alt="" />
 			<div className="card--controls">
-				<Link to={post.full_slug}>Category</Link>
 				<Link to={post.full_slug}>
-					<h2>{post.content.title}</h2>
+					<h3 className="card--category">Category</h3>
+				</Link>
+				<Link to={post.full_slug}>
+					<h2 className="">{post.content.title}</h2>
 				</Link>
 				<p>{post.content.summary}</p>
 			</div>
-			<style jsx>{`
-				p {
-					color: red;
-				}
-				img {
-					width: 100%;
-					max-height: 220px;
-				}
-			`}</style>
+			<style jsx>{``}</style>
 		</div>
 	);
 };

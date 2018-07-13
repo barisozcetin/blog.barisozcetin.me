@@ -8,11 +8,13 @@ const blogGrid = ({ posts }) => {
 			<style jsx>{`
 				.blog--grid {
 					display: grid;
+					justify-content: space-between;
 				}
 				@media only screen and (min-width: 480px) {
 					.blog--grid {
 						grid-template-columns: 1fr 1fr 1fr;
 						grid-gap: 20px;
+						grid-template-areas: post post sidebar;
 					}
 				}
 			`}</style>
