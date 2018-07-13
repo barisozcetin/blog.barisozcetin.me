@@ -1,26 +1,32 @@
 import React, { Component } from 'react';
 
+import BlogGrid from '../components/blogGrid';
+
 export class listTemplate extends Component {
 	constructor(props) {
 		super(props);
-		const list = props.pathContext.myData;
-		this.state = { posts: list };
+		const list = props.pathContext.myData.map((item) => item.node);
+		const posts = list.map((item) => {
+			try {
+				item.content = item.content ? JSON.parse(item.content) : null;
+			} catch (err) {
+				item.content = '';
+			}
+			return item;
+		});
+
+		this.state = { posts };
 	}
 	render() {
 		const { posts } = this.state;
 		return (
 			<div>
-				{posts &&
-					posts.map((post) => (
-						<div className="post--item" key={post.node.id}>
-							<h2>{post.node.title}</h2>
-							<p>{post.node.content}</p>
-						</div>
-					))}
-				<p>list template</p>
+				<BlogGrid posts={posts} />
 			</div>
 		);
 	}
 }
 
 export default listTemplate;
+
+// let story = Object.assign({}, props.pathContext.story);

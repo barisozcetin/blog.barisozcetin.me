@@ -48,7 +48,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
 				});
 				//	console.log(entries);
 				createPage({
-					path: `/blog`,
+					path: `/a`,
 					component: listTemplate,
 					context: {
 						myData: entries
