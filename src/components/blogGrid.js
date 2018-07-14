@@ -9,6 +9,7 @@ const blogGrid = ({ posts }) => {
 				.blog--grid {
 					display: grid;
 					justify-content: space-between;
+					grid-template-columns: 1fr;
 				}
 				@media only screen and (min-width: 480px) {
 					.blog--grid {

@@ -23,7 +23,7 @@ export class listTemplate extends Component {
 	render() {
 		const { posts } = this.state;
 		return (
-			<div className="main-grid">
+			<div className="main-grid pt-2 mt-2">
 				<BlogGrid posts={posts} />
 				<SideBar />
 				<style jsx>{`

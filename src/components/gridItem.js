@@ -15,13 +15,13 @@ const gridItem = ({ post }) => {
 					<h1 className="text-dark card-title h1">{post.content.title}</h1>
 				</Link>
 				<div className="social-buttons">
-					<button className="social-button btn btn-lg btn-primary">
+					<button className="social-button btn btn-lg btn-facebook text-light">
 						<i className="fab fa-facebook-f" />
 					</button>
-					<button className="social-button btn btn-lg btn-primary">
+					<button className="social-button btn btn-lg btn-twitter text-light">
 						<i className="fab fa-twitter" />
 					</button>
-					<button className="social-button btn btn-lg btn-primary">
+					<button className="social-button btn btn-lg btn-linkedin text-light">
 						<i className="fab fa-linkedin-in" />
 					</button>
 				</div>

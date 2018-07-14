@@ -14,7 +14,7 @@ class StoryblokEntry extends React.Component {
 		let content = this.state.story.content;
 		// console.log(content);
 		return (
-			<div className="main-grid">
+			<div className="main-grid pt-2 mt-2">
 				{React.createElement(Components[content.component], { key: content._uid, blok: content })} <Sidebar />{' '}
 				<style jsx>{`
 					.main-grid {
@@ -23,7 +23,7 @@ class StoryblokEntry extends React.Component {
 					@media only screen and (min-width: 480px) {
 						.main-grid {
 							grid-template-columns: 3fr 1fr;
-							grid-gap: 25px;
+							grid-gap: 40px;
 						}
 					}
 				`}</style>

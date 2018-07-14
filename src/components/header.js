@@ -5,7 +5,7 @@ const Header = ({ siteTitle }) => (
 	<nav className="navbar-container">
 		<section className="">
 			<Link to="/">
-				<div className="form-group has-icon-left navbar--logo text-center">
+				<div className="navbar--logo text-center">
 					<img
 						src="https://res.cloudinary.com/dydyt6wbt/image/upload/v1531524115/favicon-256.png"
 						alt=""
@@ -15,21 +15,28 @@ const Header = ({ siteTitle }) => (
 				</div>
 			</Link>
 		</section>
-		<section className="navbar--links text-justify text-center">
+		<section className="navbar--links">
 			<Link to="/">Main</Link>
 			<Link to="/">Main</Link>
 		</section>
 		<style jsx>{`
 			.navbar-container {
 				display: grid;
+				border: 2px solid red;
+				margin-bottom: 20px;
 			}
 			.navbar--logo {
-				display: flex;
+				display: grid;
+				grid-template-columns: auto auto;
+				grid-gap: 10px;
+				align-items: center;
+			}
+			.navbar--links {
+				grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
 			}
 			@media only screen and (min-width: 480px) {
 				.navbar-container {
-					grid-template-columns: 1fr 1fr;
-					grid-gap: 100px;
+					grid-template-columns: 2fr 1fr;
 					height: 140px;
 					padding-top: 20px;
 					padding-bottom: 20px;

@@ -35,13 +35,13 @@ export class Post extends Component {
 				<div className="post-header">
 					<h1>{this.props.blok.title}</h1>
 					<div className="social-buttons">
-						<button className="social-button btn btn-lg btn-primary">
+						<button className="social-button btn btn-lg btn-facebook text-light">
 							<i className="fab fa-facebook-f" />
 						</button>
-						<button className="social-button btn btn-lg btn-primary">
+						<button className="social-button btn btn-lg btn-twitter text-light">
 							<i className="fab fa-twitter" />
 						</button>
-						<button className="social-button btn btn-lg btn-primary">
+						<button className="social-button btn btn-lg btn-linkedin text-light">
 							<i className="fab fa-linkedin-in" />
 						</button>
 					</div>
@@ -54,7 +54,7 @@ export class Post extends Component {
 					/>
 				</div>
 				<div className="post-body">
-					<pre ref="test" className="test">
+					<pre ref="test" className="test code">
 						{this.props.blok.content}
 					</pre>
 				</div>
@@ -72,6 +72,13 @@ export class Post extends Component {
 					}
 					.test {
 						word-wrap: break-word;
+					}
+					pre {
+						white-space: pre-wrap; /* Since CSS 2.1 */
+						white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+						white-space: -pre-wrap; /* Opera 4-6 */
+						white-space: -o-pre-wrap; /* Opera 7 */
+						word-wrap: break-word; /* Internet Explorer 5.5+ */
 					}
 				`}</style>
 			</div>
