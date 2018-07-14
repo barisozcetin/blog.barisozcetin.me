@@ -1,4 +1,4 @@
-const token = require('./local-config');
+//const token = require('./local-config');
 require('dotenv').config({
 	path: `.env.${process.env.NODE_ENV}`
 });
