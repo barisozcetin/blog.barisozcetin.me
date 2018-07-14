@@ -1,3 +1,8 @@
+const token = require('./local-config');
+require('dotenv').config({
+	path: `.env.${process.env.NODE_ENV}`
+});
+
 module.exports = {
 	siteMetadata: {
 		title: 'Blog - Baris Ozcetin'
@@ -6,7 +11,7 @@ module.exports = {
 		{
 			resolve: 'gatsby-source-storyblok',
 			options: {
-				accessToken: 'Dkyf4n3gCs1BJbvlRLhLUQtt',
+				accessToken: token || process.env.accessToken,
 				homeSlug: 'blog',
 				version: 'draft'
 			}
