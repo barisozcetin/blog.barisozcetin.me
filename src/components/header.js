@@ -25,9 +25,9 @@ const Header = ({ siteTitle }) => (
 			<Link to="/">
 				<span className="text-dark">contact</span>
 			</Link>
-			<Link to="/">
-				<span className="text-dark">barisozcetin.me</span>
-			</Link>
+			<a href="https://www.barisozcetin.me" className="text-dark">
+				barisozcetin.me
+			</a>
 		</section>
 		<style jsx>{`
 			.navbar-container {
@@ -62,7 +62,7 @@ const Header = ({ siteTitle }) => (
 				border-color: black;
 			}
 
-			@media only screen and (min-width: 768px) {
+			@media only screen and (min-width: 1024px) {
 				.navbar-container {
 					grid-template-rows: 1fr;
 					grid-template-columns: 2fr 1fr;

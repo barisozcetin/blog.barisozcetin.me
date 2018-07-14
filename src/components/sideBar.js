@@ -11,18 +11,20 @@ const sideBar = () => {
 				</button>
 			</div>
 			<div className="btn-group btn-group-block">
-				<button className="s-circle">
+				<a href="https://www.facebook.com" className="s-circle btn-lg btn-social">
 					<i className="fab fa-facebook-f" />
-				</button>
-				<button className="s-circle">
+				</a>
+				<a className="s-circle btn-lg btn-social" href="https://www.twitter.com">
 					<i className="fab fa-twitter" />
-				</button>
-				<button className="s-circle btn-lg">
+				</a>
+
+				<a className="s-circle btn-lg btn-social" href="htps://www.linkedin.com">
 					<i className="fab fa-linkedin-in" />
-				</button>
-				<button className="s-circle btn-lg">
+				</a>
+
+				<a className="s-circle btn-lg btn-social" href="https://github.com/barisozcetin/">
 					<i className="fab fa-github" />
-				</button>
+				</a>
 			</div>
 			<style jsx>{`
 				.s-circle {
@@ -32,10 +34,15 @@ const sideBar = () => {
 					height: 50px;
 					background-color: black;
 				}
-				.btn-group {
-					justify-content: space-between;
+				.btn-social {
+					align-items: center;
+					display: flex;
+					justify-content: center;
 				}
-				@media only screen and (min-width: 768px) {
+				.btn-group {
+					justify-content: space-around;
+				}
+				@media only screen and (min-width: 1024px) {
 					.sidebar--container {
 						padding-top: 150px;
 					}

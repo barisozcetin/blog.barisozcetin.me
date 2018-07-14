@@ -30,7 +30,7 @@ export class listTemplate extends Component {
 					.main-grid {
 						display: grid;
 					}
-					@media only screen and (min-width: 768px) {
+					@media only screen and (min-width: 1024px) {
 						.main-grid {
 							grid-template-columns: 3fr 1fr;
 							grid-gap: 40px;
