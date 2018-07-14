@@ -627,6 +627,7 @@ body {
 }
 div[data-reactroot] {
 	background-color: white;
+	min-height: 100vh;
 }
 
 .btn-facebook {
@@ -639,4 +640,8 @@ div[data-reactroot] {
 
 .btn-linkedin {
 	background-color: #0d7bb7;
+}
+
+.text-blue {
+	color: #209cee;
 }

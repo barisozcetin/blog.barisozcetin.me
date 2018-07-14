@@ -61,8 +61,8 @@ export class Post extends Component {
 				<style jsx>{`
 					.social-buttons {
 						display: grid;
-						grid-template-columns: repeat(auto-fill, minmax(100px, 150px));
-						grid-gap: 10px;
+						grid-template-columns: repeat(auto-fill, minmax(60px, 120px));
+						grid-gap: 5px;
 						justify-content: space-between;
 						margin-top: 2rem;
 						margin-bottom: 2rem;

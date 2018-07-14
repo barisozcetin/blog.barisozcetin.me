@@ -9,7 +9,7 @@ const gridItem = ({ post }) => {
 			</div>
 			<div className="card-header">
 				<Link to={post.full_slug}>
-					<h3 className="card--category card-subtitle text-primary">{post.content.category}</h3>
+					<h3 className="card--category card-subtitle text-blue">{post.content.category}</h3>
 				</Link>
 				<Link to={post.full_slug}>
 					<h1 className="text-dark card-title h1">{post.content.title}</h1>

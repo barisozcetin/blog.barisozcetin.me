@@ -11,7 +11,7 @@ const blogGrid = ({ posts }) => {
 					justify-content: space-between;
 					grid-template-columns: 1fr;
 				}
-				@media only screen and (min-width: 480px) {
+				@media only screen and (min-width: 768px) {
 					.blog--grid {
 						grid-template-columns: 1fr 1fr;
 						grid-gap: 20px;
