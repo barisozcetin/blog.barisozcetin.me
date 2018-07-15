@@ -7,21 +7,26 @@ export class listTemplate extends Component {
 	constructor(props) {
 		super(props);
 		const list = props.pathContext.myData.map((item) => item.node);
+		console.log(list);
 		const posts = list
 			.map((item) => {
+				// console.log(typeof item.content);
 				try {
 					item.content = item.content ? JSON.parse(item.content) : null;
 				} catch (err) {
-					item.content = '';
+					// console.log(err);
+					// console.log(item);
+					// item.content = '';
 				}
 				return item;
 			})
-			.reverse();
+			.sort((a, b) => b.created_at > a.created_at);
 
 		this.state = { posts };
 	}
+
 	render() {
-		const { posts } = this.state;
+		const { posts = [] } = this.state;
 		return (
 			<div className="main-grid pt-2 mt-2">
 				<BlogGrid posts={posts} />

@@ -67,8 +67,26 @@ export class Post extends Component {
 						margin-top: 2rem;
 						margin-bottom: 2rem;
 					}
+
+					.btn-facebook {
+						background-color: #3b5a99;
+					}
+
+					.btn-twitter {
+						background-color: rgb(37, 168, 224);
+					}
+
+					.btn-linkedin {
+						background-color: #0d7bb7;
+					}
+
+					.text-blue {
+						color: #209cee;
+					}
+
 					img {
 						max-height: 480px;
+						width: 100%;
 					}
 					.test {
 						word-wrap: break-word;
