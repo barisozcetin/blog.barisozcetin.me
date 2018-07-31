@@ -9,10 +9,10 @@ const gridItem = ({ post, dateTime }) => {
 				<img src={post.content.image ? post.content.image.url : '/error.jpg'} alt="" className="img-responsive" />
 			</div>
 			<div className="card-header">
-				<Link to={post.full_slug}>
+				<Link to={post.full_slug} className="text-dark">
 					<h3 className="card--category card-subtitle text-blue">{post.content.category}</h3>
 				</Link>
-				<Link to={post.full_slug}>
+				<Link to={post.full_slug} className="text-dark">
 					<h2 className="text-dark card-title h2">{post.content.title}</h2>
 				</Link>
 
@@ -60,9 +60,7 @@ const gridItem = ({ post, dateTime }) => {
 				.text-blue {
 					color: #209cee;
 				}
-				a:hover {
-					text-decoration: none;
-				}
+
 				time {
 					font-weight: bold;
 					padding-top: 10px;

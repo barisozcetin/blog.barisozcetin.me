@@ -19,10 +19,10 @@ const Header = ({ siteTitle }) => (
 			<hr />
 		</div>
 		<section className="navbar--links">
-			<Link to="/" disabled>
+			<Link to="/">
 				<span className="text-dark">subscribe</span>
 			</Link>
-			<Link to="/" disabled>
+			<Link to="/">
 				<span className="text-dark">contact</span>
 			</Link>
 			<a href="https://www.barisozcetin.me" className="text-dark">
