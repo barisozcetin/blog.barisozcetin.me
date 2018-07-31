@@ -30,10 +30,14 @@ export class Post extends Component {
 	}
 	render() {
 		console.log(this.props);
+		let postDate = new Date(this.props.dateTime);
+		// console.log()
 		return (
 			<div className="post-grid">
 				<div className="post-header">
 					<h1>{this.props.blok.title}</h1>
+					<time dateTime={postDate}>{postDate.toDateString()}</time>
+
 					<div className="social-buttons">
 						<button className="social-button btn btn-lg btn-facebook text-light">
 							<i className="fab fa-facebook-f" />
@@ -87,6 +91,7 @@ export class Post extends Component {
 					img {
 						max-height: 480px;
 						width: 100%;
+						object-fit: cover;
 					}
 					.test {
 						word-wrap: break-word;

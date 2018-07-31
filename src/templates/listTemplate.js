@@ -20,7 +20,7 @@ export class listTemplate extends Component {
 				}
 				return item;
 			})
-			.sort((a, b) => b.created_at > a.created_at);
+			.sort((a, b) => b.published_at > a.published_at);
 
 		this.state = { posts };
 	}

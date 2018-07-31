@@ -13,9 +13,15 @@ class StoryblokEntry extends React.Component {
 	render() {
 		let content = this.state.story.content;
 		// console.log(content);
+		let dateTime = this.state.story.published_at;
 		return (
 			<div className="main-grid pt-2 mt-2">
-				{React.createElement(Components[content.component], { key: content._uid, blok: content })} <Sidebar />{' '}
+				{React.createElement(Components[content.component], {
+					key: content._uid,
+					blok: content,
+					dateTime
+				})}{' '}
+				<Sidebar />{' '}
 				<style jsx>{`
 					.main-grid {
 						display: grid;

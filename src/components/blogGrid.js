@@ -4,7 +4,7 @@ import GridItem from './gridItem';
 const blogGrid = ({ posts }) => {
 	return (
 		<div className="blog--grid">
-			{posts && posts.map((post) => <GridItem post={post} key={post.id} />)}
+			{posts && posts.map((post) => <GridItem post={post} key={post.id} dateTime={post.published_at} />)}
 			<style jsx>{`
 				.blog--grid {
 					display: grid;
