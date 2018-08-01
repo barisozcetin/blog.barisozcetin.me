@@ -629,3 +629,28 @@ div[data-reactroot] {
 	background-color: white;
 	min-height: 100vh;
 }
+
+.margin-auto {
+	margin: auto;
+}
+
+.center {
+	display: flex;
+	justify-content: center;
+}
+
+/* figure {
+	border: thin #c0c0c0 solid;
+	display: flex;
+	flex-flow: column;
+	margin: 0;
+	padding: 5px;
+}
+
+figcaption {
+	background-color: #fff;
+	color: #222;
+	font: italic smaller sans-serif;
+	padding: 3px;
+	text-align: center;
+} */

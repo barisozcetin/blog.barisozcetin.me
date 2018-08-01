@@ -29,7 +29,7 @@ export class Post extends Component {
 		// this.refs.test.innerHTML = 'Hello';
 	}
 	render() {
-		console.log(this.props);
+		// console.log(this.props);
 		let postDate = new Date(this.props.dateTime);
 		// console.log()
 		return (
@@ -58,9 +58,7 @@ export class Post extends Component {
 					/>
 				</div>
 				<div className="post-body">
-					<pre ref="test" className="test code">
-						{this.props.blok.content}
-					</pre>
+					<div dangerouslySetInnerHTML={{ __html: this.props.blok.content }} className="content" />
 				</div>
 				<style jsx>{`
 					.social-buttons {
@@ -93,15 +91,24 @@ export class Post extends Component {
 						width: 100%;
 						object-fit: cover;
 					}
-					.test {
+					.content {
 						word-wrap: break-word;
+						border: 1px dotted blue;
+						padding: 20px;
+						line-height: 2;
 					}
-					pre {
+					.content {
 						white-space: pre-wrap; /* Since CSS 2.1 */
 						white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
 						white-space: -pre-wrap; /* Opera 4-6 */
 						white-space: -o-pre-wrap; /* Opera 7 */
 						word-wrap: break-word; /* Internet Explorer 5.5+ */
+					}
+					.image-container {
+						border: 1px solid red;
+					}
+					img {
+						margin: auto;
 					}
 				`}</style>
 			</div>
