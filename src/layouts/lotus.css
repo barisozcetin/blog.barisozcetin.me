@@ -136,3 +136,13 @@ sup {
 .txt-cyan {
 	color: #92f9f6;
 }
+
+.margin-auto {
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.center {
+	display: flex;
+	justify-content: center;
+}

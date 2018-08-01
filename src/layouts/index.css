@@ -631,7 +631,8 @@ div[data-reactroot] {
 }
 
 .margin-auto {
-	margin: auto;
+	margin-right: auto;
+	margin-left: auto;
 }
 
 .center {

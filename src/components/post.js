@@ -63,7 +63,7 @@ export class Post extends Component {
 				<style jsx>{`
 					.social-buttons {
 						display: grid;
-						grid-template-columns: repeat(auto-fill, minmax(60px, 120px));
+						grid-template-columns: repeat(auto-fill, minmax(50px, 100px));
 						grid-gap: 5px;
 						justify-content: space-between;
 						margin-top: 2rem;
@@ -93,9 +93,14 @@ export class Post extends Component {
 					}
 					.content {
 						word-wrap: break-word;
-						border: 1px dotted blue;
-						padding: 20px;
+						// border: 1px dotted blue;
+						padding: 5px;
 						line-height: 2;
+					}
+					@media screen and (min-width: 768px) {
+						.content {
+							padding: 20px;
+						}
 					}
 					.content {
 						white-space: pre-wrap; /* Since CSS 2.1 */

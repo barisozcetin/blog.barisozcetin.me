@@ -40,7 +40,7 @@ const gridItem = ({ post, dateTime }) => {
 				}
 				.social-buttons {
 					display: grid;
-					grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+					grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
 					grid-gap: 10px;
 					justify-content: space-between;
 				}
