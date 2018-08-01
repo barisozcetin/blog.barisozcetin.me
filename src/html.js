@@ -1,6 +1,9 @@
 import React from 'react';
 
 export default class HTML extends React.Component {
+	componentDidMount() {
+		emailjs.init('%REACT_APP_EMAILJS_USERID%');
+	}
 	render() {
 		return (
 			<html lang="en">
@@ -14,6 +17,9 @@ export default class HTML extends React.Component {
 				<body>
 					<div id="___gatsby" dangerouslySetInnerHTML={{ __html: this.props.body }} />
 					{this.props.postBodyComponents}
+					<script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.1.0/email.min.js" />
+
+					{/* <script type="text/javascript">(function(){emailjs.init('%REACT_APP_EMAILJS_USERID%')})();</script> */}
 				</body>
 			</html>
 		);
