@@ -5,7 +5,8 @@ export class ModalContact extends Component {
 		name: '',
 		email: '',
 		message: '',
-		formEmailSent: false
+		formEmailSent: false,
+		loading: false
 	};
 
 	onChange = (e) => {
@@ -17,12 +18,9 @@ export class ModalContact extends Component {
 		e.preventDefault();
 		const { name, email, message } = this.state;
 		if (email.trim === '' || message.trim() === '') return false;
+		this.setState({ loading: true });
 		const { REACT_APP_EMAILJS_RECEIVER: receiverEmail, REACT_APP_EMAILJS_TEMPLATEID: template } = process.env;
 		this.sendMail(template, name, email, receiverEmail, message);
-
-		this.setState({
-			formSubmitted: true
-		});
 	};
 
 	sendMail(templateId, name, email, receiverEmail, message) {
@@ -35,56 +33,79 @@ export class ModalContact extends Component {
 				message
 			})
 			.then((res) => {
-				this.setState({ formEmailSent: true });
+				this.setState({ formEmailSent: true, loading: false });
 			})
 			.catch((err) => console.error('Failed to send message. Error: ', err));
 	}
 
 	closeHandler = (e) => {
-		if (e.target.name === 'modal' || e.target.name === 'close' || e.target.id === 'contact-modal')
-			this.props.handleClose(e);
+		this.setState({
+			name: '',
+			email: '',
+			message: '',
+			formEmailSent: false,
+			loading: false
+		});
+		this.props.handleClose(e);
 	};
 
 	render() {
 		const { show } = this.props;
 		const showClass = show ? 'active' : '';
+		const buttonClass = this.state.loading ? 'btn contact__submit loading' : 'btn contact__submit';
 		const sendButton = this.state.formEmailSent ? (
-			<button className="contact__submit" type="submit" disabled style={{ color: 'green', fontSize: '1.5rem' }}>
+			<button
+				className={buttonClass + ' disabled'}
+				type="submit"
+				disabled
+				style={{ color: 'green', fontSize: '1.5rem' }}
+			>
 				✔
 			</button>
 		) : (
-			<button className="contact__submit" type="submit">
+			<button className={buttonClass} type="submit">
 				Send
 			</button>
 		);
 		return (
 			<div className={`modal ${showClass}`} id="modal-id">
-				<a href="#close" className="modal-overlay" aria-label="Close" />
+				<a className="modal-overlay" aria-label="Close" onClick={this.closeHandler} />
 				<div className="modal-container">
-					<p style={{ textAlign: 'center', marginTop: '15px' }}>
-						You can send an email to <strong style={{ fontWeight: 'bold' }}>barisozcetin@gmail.com </strong>or contact
-						with form below
-					</p>
-					<form method="POST" onSubmit={this.onSubmit} className="contact__form" style={{ marginTop: '5px' }}>
-						<input type="text" name="name" placeholder="Your name" value={this.state.name} onChange={this.onChange} />
-						<input
-							type="email"
-							name="email"
-							placeholder="Your email"
-							required
-							value={this.state.email}
-							onChange={this.onChange}
-						/>
-						<textarea
-							name="message"
-							placeholder="Your message"
-							required
-							value={this.state.message}
-							onChange={this.onChange}
-							rows={5}
-						/>
-						{sendButton}
-					</form>
+					<div className="modal-body">
+						<div className="content">
+							<p style={{ textAlign: 'center' }}>
+								You can send an email to <strong style={{ fontWeight: 'bold' }}>barisozcetin@gmail.com </strong>or
+								contact with form below
+							</p>
+							<form method="POST" onSubmit={this.onSubmit} className="contact__form" style={{ paddingTop: '10px' }}>
+								<input
+									type="text"
+									name="name"
+									placeholder="Your name"
+									value={this.state.name}
+									onChange={this.onChange}
+									autoFocus
+								/>
+								<input
+									type="email"
+									name="email"
+									placeholder="Your email"
+									required
+									value={this.state.email}
+									onChange={this.onChange}
+								/>
+								<textarea
+									name="message"
+									placeholder="Your message"
+									required
+									value={this.state.message}
+									onChange={this.onChange}
+									rows={5}
+								/>
+								{sendButton}
+							</form>
+						</div>
+					</div>
 					<button
 						name="close"
 						className="modal__close"

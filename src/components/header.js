@@ -7,6 +7,13 @@ class Header extends Component {
 	state = {
 		modalOpen: false
 	};
+	componentDidMount() {
+		// window.emailjs.init('%REACT_APP_EMAILJS_USERID%');
+		emailjs.init(process.env.REACT_APP_EMAILJS_USERID);
+
+		// console.log('alloooooo');
+		// console.log(process.env.REACT_APP_EMAILJS_USERID);
+	}
 	toggleModal = (e) => {
 		e.preventDefault();
 		e.stopPropagation();
@@ -44,6 +51,9 @@ class Header extends Component {
 					</a>
 				</section>
 				<style jsx>{`
+					a {
+						cursor: pointer;
+					}
 					.navbar-container {
 						display: grid;
 						//border: 2px solid red;
@@ -70,6 +80,7 @@ class Header extends Component {
 					.navbar--links {
 						grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
 						grid-gap: 10px;
+						justify-items: start;
 					}
 					hr {
 						margin: 10px;
@@ -92,7 +103,7 @@ class Header extends Component {
 						display: grid;
 						align-content: center;
 						grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-						justify-items: center;
+						// justify-items: center;
 					}
 					img {
 						max-height: 80px;

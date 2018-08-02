@@ -65,6 +65,9 @@ const gridItem = ({ post, dateTime }) => {
 					font-weight: bold;
 					padding-top: 10px;
 				}
+				button.btn {
+					border: none;
+				}
 			`}</style>
 		</div>
 	);

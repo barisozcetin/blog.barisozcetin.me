@@ -115,6 +115,9 @@ export class Post extends Component {
 					img {
 						margin: auto;
 					}
+					button.btn {
+						border: none;
+					}
 				`}</style>
 			</div>
 		);

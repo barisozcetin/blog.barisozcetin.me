@@ -10,3 +10,6 @@ yarn-error.log
 local-config.js
 .firebaserc
 firebase.json
+.env.development
+.env.local
+env.production

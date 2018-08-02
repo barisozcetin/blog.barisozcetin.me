@@ -1,8 +1,11 @@
 import React from 'react';
+import emailjs from 'emailjs-com';
 
 export default class HTML extends React.Component {
 	componentDidMount() {
-		emailjs.init('%REACT_APP_EMAILJS_USERID%');
+		emailjs.init('user_Ll7r4aLJzI4VpwvQnvGbX');
+		// emailjs.init('%REACT_APP_EMAILJS_USERID%');
+		console.log('-----');
 	}
 	render() {
 		return (
