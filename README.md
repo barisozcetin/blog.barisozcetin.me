@@ -1,7 +1,10 @@
-# gatsby-starter-default
-The default Gatsby starter.
+It's a simple blog script build with Gatsby and uses Storyblok as CMS . First created for my own needs. But planning to making it make it more flexible soon.
 
-For an overview of the project structure please refer to the [Gatsby documentation - Building with Components](https://www.gatsbyjs.org/docs/building-with-components/).
+Live at [my own blog](https://blog.barisozcetin.me)
+
+## Prerequisites
+⋅⋅* Node
+⋅⋅* Gatsby CLI
 
 ## Install
 
@@ -12,15 +15,32 @@ npm install --global gatsby-cli
 
 And run from your CLI:
 ```sh
-gatsby new gatsby-example-site
+gatsby new project-name https://github.com/barisozcetin/blog.barisozcetin.me
 ```
 
 Then you can run it by:
 ```sh
-cd gatsby-example-site
+cd project-name
 gatsby develop
 ```
 
-## Deploy
+## Build 
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+To build the project run:
+```sh
+gatsby build
+```
+
+## Stack
+
+⋅⋅* [Gatsby](https://www.gatsbyjs.org/) React based static site generator.
+⋅⋅* [Storyblok](https://www.storyblok.com/) Headless Content Management System to keep my blog posts
+⋅⋅* [styled-jsx](https://github.com/zeit/styled-jsx) Awesome way to use scoped CSS in JSX
+⋅⋅* [Spectre](https://github.com/picturepan2/spectre) Lightweight CSS framework
+⋅⋅* [EmailJS](http://www.emailjs.com/) Helps us to send e-mails without a server
+
+## Todos
+
+⋅⋅* Contact form will be editable.
+⋅⋅* Subscription will be added.
+⋅⋅* Storyblok content format will be flexible.
