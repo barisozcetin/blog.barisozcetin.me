@@ -8,11 +8,7 @@ class Header extends Component {
 		modalOpen: false
 	};
 	componentDidMount() {
-		// window.emailjs.init('%REACT_APP_EMAILJS_USERID%');
 		emailjs.init(process.env.REACT_APP_EMAILJS_USERID);
-
-		// console.log('alloooooo');
-		// console.log(process.env.REACT_APP_EMAILJS_USERID);
 	}
 	toggleModal = (e) => {
 		e.preventDefault();
@@ -22,7 +18,6 @@ class Header extends Component {
 	render() {
 		return (
 			<nav className="navbar-container">
-				{/* <ContactModal show={this.state.modalOpen} handleClose={this.toggleModal} /> */}
 				<ModalContact show={this.state.modalOpen} handleClose={this.toggleModal} />
 				<section className="navbar--left">
 					<Link to="/">
