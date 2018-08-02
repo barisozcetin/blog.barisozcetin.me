@@ -44,3 +44,8 @@ gatsby build
 * Contact form will be editable.
 * Subscription will be added.
 * Storyblok content format will be flexible.
+
+
+## License
+
+This project is licensed under the MIT License
