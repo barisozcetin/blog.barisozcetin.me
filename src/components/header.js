@@ -40,9 +40,9 @@ class Header extends Component {
 					<hr />
 				</div>
 				<section className="navbar--links">
-					<Link to="/">
+					<button to="/" disabled id="subscribe" className="disabled disabled-link">
 						<span className="text-dark">subscribe</span>
-					</Link>
+					</button>
 					<a role="button" onClick={this.toggleModal}>
 						<span className="text-dark">contact</span>
 					</a>
@@ -51,6 +51,10 @@ class Header extends Component {
 					</a>
 				</section>
 				<style jsx>{`
+					#subscribe {
+						background: none;
+						border: none;
+					}
 					a {
 						cursor: pointer;
 					}
@@ -85,6 +89,9 @@ class Header extends Component {
 					hr {
 						margin: 10px;
 						border-color: black;
+					}
+					.disabled-link {
+						cursor: not-allowed;
 					}
 
 					@media only screen and (min-width: 1024px) {
