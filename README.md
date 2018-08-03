@@ -37,7 +37,7 @@ gatsby build
 * [Gatsby](https://www.gatsbyjs.org/) React based static site generator.
 * [Storyblok](https://www.storyblok.com/) Headless Content Management System to keep my blog posts
 * [styled-jsx](https://github.com/zeit/styled-jsx) Awesome way to use scoped CSS in JSX
-* [Spectre](https://github.com/picturepan2/spectre) Lightweight CSS framework
+* [Spectre](https://github.com/picturepan2/spectre) Lightweight CSS framework. Grid system isn't used, instead, CSS Grid Used.
 * [EmailJS](http://www.emailjs.com/) Helps us to send e-mails without a server
 
 ## Todos
