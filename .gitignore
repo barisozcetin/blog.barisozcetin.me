@@ -13,3 +13,4 @@ firebase.json
 .env.development
 .env.local
 env.production
+analytics-config.js

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Link from 'gatsby-link';
-import ContactModal from './ContactModal';
 import ModalContact from './ModalContact';
 
 class Header extends Component {
