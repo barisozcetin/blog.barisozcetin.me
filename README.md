@@ -17,6 +17,7 @@ And run from your CLI:
 ```sh
 gatsby new project-name https://github.com/barisozcetin/blog.barisozcetin.me
 ```
+Edit local-config-example.js to local-config.js and enter your Storyblok Access Token
 
 Then you can run it by:
 ```sh
