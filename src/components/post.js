@@ -106,6 +106,12 @@ export class Post extends Component {
 							padding: 20px;
 						}
 					}
+					@media screen and (max-width: 767px) {
+						h1 {
+							font-size: 1.8rem;
+							text-align: center;
+						}
+					}
 					.content {
 						white-space: pre-wrap; /* Since CSS 2.1 */
 						white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
