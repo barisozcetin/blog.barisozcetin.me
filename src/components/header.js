@@ -76,9 +76,9 @@ class Header extends Component {
 						font-weight: 300;
 					}
 					.navbar--links {
-						grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+						grid-template-columns: minmax(55px, 2fr) minmax(65px, 2fr) minmax(100px, 3fr);
 						grid-gap: 10px;
-						justify-items: start;
+						justify-items: center;
 					}
 					hr {
 						margin: 10px;

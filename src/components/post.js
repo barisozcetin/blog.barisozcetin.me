@@ -61,11 +61,15 @@ export class Post extends Component {
 					<div dangerouslySetInnerHTML={{ __html: this.props.blok.content }} className="content" />
 				</div>
 				<style jsx>{`
+					.post-body {
+						font-size: 0.9rem;
+						line-height: 27px;
+					}
 					.social-buttons {
 						display: grid;
-						grid-template-columns: repeat(auto-fill, minmax(50px, 100px));
+						grid-template-columns: repeat(auto-fill, minmax(50px, 90px));
 						grid-gap: 5px;
-						justify-content: space-between;
+						justify-content: space-around;
 						margin-top: 2rem;
 						margin-bottom: 2rem;
 					}
